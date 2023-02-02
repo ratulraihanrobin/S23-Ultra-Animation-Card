@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 15px 30px rgba(0, 0,0, 0.220);
+    display: flex;
+    background: rgb(247, 206, 206);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+.card:hover {
+    width: 600px;
+}
+.card .imgBx{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    
+}
+.card .imgBx img {
+    max-width: 250px;
+    padding: 30px;
+    transition: 0.5s ease-in-out;
+}
+.card:hover img{
+    padding: 0px;
+    transform: rotateY(-360deg);
+}
+.card .details{
+    position: absolute;
+    left: 0;
+    min-width: 300px;
+    height: 100%;
+    background: rgb(250, 205, 205);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+.card .details{
+    left: 300px;
+}
+.card .details::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+.card .details h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.card .details h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 16px 0px 8px 0px;
+}
+.card .details span h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+
+}
+.card .details p {
+    font-size: 0.8em;
+}
+.card .details .color {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.radio {
+    cursor: pointer;
+
+}
+.radio input[type="radio"] {
+    display: none;
+
+}
+.radio span {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: #FFF;
+    display: block;
+}
+.radio span::after {
+    content: '';
+    height: 18px;
+    width: 18px;
+    background: black;
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+.radio input[type="radio"]:checked ~ span::after {
+    
+    
+}
+
+.card .details .price{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+.card .details .price h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.card .details .price a {
+    display: inline-flex;
+    padding: 10px 25px;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.288);
+    transition: 0.3s;
+  }
+  .card .details .price a:hover {
+    background: rgb(248, 229, 229);
+  }
